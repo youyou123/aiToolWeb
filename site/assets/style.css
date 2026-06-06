@@ -83,15 +83,21 @@ main {
   margin: 0;
 }
 
-.ad-slot {
-  background: var(--ad);
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.85rem;
+/* 空广告位不显示；粘贴 Adsterra script+div 后会自动出现 */
+.ad-container {
   margin: 1.5rem 0;
+  min-height: 0;
+  text-align: center;
+}
+
+.ad-container:empty {
+  display: none;
+}
+
+.ad-mobile {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .card-list {
