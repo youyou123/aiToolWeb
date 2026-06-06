@@ -3,6 +3,10 @@
   "private": true,
   "scripts": {
     "start": "npx --yes serve site -l 8080",
-    "preview": "python -m http.server 8080 --directory site"
+    "preview": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.98.0"
   }
 }
